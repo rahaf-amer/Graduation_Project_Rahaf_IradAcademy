@@ -1,0 +1,119 @@
+:root {
+  --font-size: 14px;
+  --foreground: #111;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --radius: 0.625rem;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: var(--font-size); }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: url('https://pic.i7lm.com/wp-content/uploads/2019/11/%D9%85%D9%86%D8%A7%D8%B8%D8%B1-%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9-%D8%A7%D8%AC%D9%85%D9%84-%D8%B5%D9%88%D8%B1-%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9-%D8%AC%D8%A8%D8%A7%D9%84-%D8%A8%D8%AD%D8%B1-%D8%B3%D9%85%D8%A7%D8%A1-%D8%B4%D8%B1%D9%88%D9%82-%D8%BA%D8%B1%D9%88%D8%A8-%D8%A3%D9%86%D9%87%D8%A7%D8%B1-%D8%A8%D8%AD%D9%8A%D8%B1%D8%A9-%D8%A3%D8%B4%D8%AC%D8%A7%D8%B15.jpg')
+              no-repeat center center fixed;
+  background-size: cover;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  width: 100%;
+  max-width: 28rem;
+  padding: 1.5rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 2rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.30);
+}
+
+.header { text-align: center; margin-bottom: 1.5rem; }
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  font-weight: var(--font-weight-normal);
+  line-height: 1.5;
+}
+
+.form { display: flex; flex-direction: column; gap: 1rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+
+label {
+  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+  color: #fff;
+}
+
+input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  font-weight: var(--font-weight-normal);
+  line-height: 1.5;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: calc(var(--radius) - 2px);
+  color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+input::placeholder { color: rgba(255, 255, 255, 0.85); }
+
+input:focus {
+  outline: none;
+  border-color: #03a9f4;
+  box-shadow: 0 0 0 2px rgba(3, 169, 244, 0.25);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.submit-button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+  background-color: #03a9f4;
+  color: #fff;
+  border: none;
+  border-radius: calc(var(--radius) - 2px);
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-button:hover { background-color: #0288d1; }
+.submit-button:focus { outline: none; box-shadow: 0 0 0 2px rgba(3, 169, 244, 0.25); }
+
+.footer { margin-top: 1.5rem; text-align: center; }
+.footer p { color: #fff; }
+.footer a { color: #03a9f4; text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .card { padding: 1.5rem; }
+  body { padding: 1rem; }
+}
